@@ -54,10 +54,10 @@ const CheckoutForm = (props) => {
 				</label>
 				<button>Checkout</button>
 			</form>
-			{/* <label>
+			<label>
 				Additional Notes:
 				<input name="notes" value={values.address} onChange={handleChanges} />
-			</label> */}
+			</label>
 
 			{showSuccessMessage && (
 				<div className="success-message" data-testid="successMessage">
