@@ -33,11 +33,4 @@ test( "form shows success message on submit with form details", async () => {
 	await userEvent.type( stateInput, state );
 	await userEvent.type( zipInput, zipCode );
 
-	// userEvent.click( screen.getByRole( "button" ) );
-
-	// await expect( screen.getByTestId( "successMessage" ) );
-
-	// await expect( screen.getByTitle( "success-name" ) );
-	// await expect( screen.getByTitle( "success-street-address" ) );
-	// await expect( screen.getByTitle( "success-city-state-zip" ) );
 }

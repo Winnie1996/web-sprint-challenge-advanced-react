@@ -13,20 +13,24 @@ const CheckoutForm = (props) => {
 			<form onSubmit={handleSubmit}>
 				<h2>Checkout Form</h2>
 				<label>
-					First Name:
+					First & Last Name:
 					<input
 						name="firstName"
 						value={values.firstName}
 						onChange={handleChanges}
 					/>
 				</label>
-				<label>
+				{/* <label>
 					Last Name:
 					<input
 						name="lastName"
 						value={values.lastName}
 						onChange={handleChanges}
 					/>
+				</label> */}
+				<label>
+					Email:
+					<input name="email" value={values.email} onChange={handleChanges} />
 				</label>
 				<label>
 					Address:
@@ -50,15 +54,24 @@ const CheckoutForm = (props) => {
 				</label>
 				<button>Checkout</button>
 			</form>
+			{/* <label>
+				Additional Notes:
+				<input name="notes" value={values.address} onChange={handleChanges} />
+			</label> */}
 
 			{showSuccessMessage && (
 				<div className="success-message" data-testid="successMessage">
 					<p>
-						You have ordered some cool plants! Lets gooooo!!!!{" "}
+						You have ordered some cool plants! Lets gooo!!{"gi "}
 						<span role="img">🎉</span>
 					</p>
 					<p>Your new green friends will be shipped to:</p>
-					<br />{" "}
+					<br />
+					<br />
+					<p title="success-name">
+						{values.firstName} {values.lastName}
+					</p>
+					<p title="success-street-address">{values.address}</p>
 					<p title="success-city-state-zip">
 						{values.city}, {values.state} {values.zip}
 					</p>
